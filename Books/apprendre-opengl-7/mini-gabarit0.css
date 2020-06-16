@@ -1,0 +1,264 @@
+body {
+	font-size: 10pt;
+	font-family: Verdana, sans-serif;
+}
+
+/** QUICKNAV */
+#quicknav {
+	width: 750px;
+	height: 25px;
+	margin: auto;
+	font-family: Verdana, sans-serif;
+  background: #486090;
+  -moz-border-radius: 10px; 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border:1px solid black;
+}
+
+#quicknav * {
+	margin: 0;
+	padding: 0;
+}
+
+/* IE6 Hack */
+* html #quicknav #sitemap {
+	height: 30px;
+}
+
+#quicknav #sitemap img {
+	margin-top: -6px;
+}
+
+#quicknav ul {
+	list-style-type: none;
+	height: 25px;
+	padding: 0 15px;
+	line-height: 17px;
+}
+
+/* IE6 Hack */
+* html #quicknav ul {
+	height: 25px;
+}
+
+#quicknav ul li {
+	display: inline;
+	margin-right: 5px;
+}
+
+#quicknav li a {
+	text-decoration: none;
+	color: #344E81;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+#quicknav li a:hover {
+	text-decoration: underline;
+}
+
+/** QUICKNAV END */
+
+/** LAYOUT */
+#layout {
+	min-width: 975px;
+	padding: 0;
+	margin: auto 10px;
+}
+.layout {
+	min-width: 975px;
+	padding: 0;
+	margin: auto 10px;
+}
+
+#pied {
+	margin-top: 10px;
+	font-size: 10pt;
+	font-family: Verdana, sans-serif;
+	text-align: center;
+}
+
+/** FOOTER */
+#gabarit_footer {
+	padding: 0;
+	margin: 0;
+	padding-bottom: 2px;
+	background-color: #638CDE;
+	background-image: url('./images/shadow-footer.png');
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	font-family: Verdana, sans-serif;
+	height: 32px;
+}
+
+#gabarit_footer a {
+	text-decoration: none;
+	color: #3964AF;
+	font-weight: bold;
+}
+
+#gabarit_footer a:hover {
+	text-decoration: underline;
+}
+
+#gabarit_footer ul {
+	list-style-type: none;
+}
+
+#gabarit_footer * {
+	margin: 0;
+	padding: 0;
+}
+
+#gabarit_footer #gabarit_footer_left {
+	background-image: url('./images/shadow-left.png');
+	background-repeat: repeat-y;
+	background-position: left;
+	float: left;
+	width: 4px;
+	height: 100%;
+}
+
+#gabarit_footer #gabarit_footer_right {
+	background-image: url('./images/shadow-right.png');
+	background-repeat: repeat-y;
+	background-position: right;
+	float: right;
+	width: 4px;
+	height: 100%;
+}
+
+#gabarit_footer #responsable {
+	display: block;
+	font-size: 10pt;
+	text-align: center;
+	color: #CCDCF7;
+	padding-top: 7px;
+}
+
+#gabarit_footer #copyright {
+	float: right;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 0.8em;
+	margin-top: 0.4em;
+	line-height: 1em;
+}
+
+#gabarit_footer a {
+	color: #CCDCF7;
+	color: #3964AF;
+	color: #FFF;
+	font-size: 11px;
+}
+
+#gabarit_footer a:hover {
+	text-decoration: underline;
+}
+
+#gabarit_footer #sitemap li {
+	font-size: 1em;
+	font-weight: bold;
+	color: #FFF;
+	margin: 0.1em;
+	display: inline;
+}
+
+#gabarit_footer .quicklink {
+	color: #F18F25;
+}
+/** FOOTER END */
+#gabarit_pied {
+	padding: 0;
+	margin: 0;
+	background-image: url('./images/pied-fond.png');
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 142px;
+}
+
+#gabarit_pied #gabarit_pied_contenu_superieur {
+	margin-left: 100px;
+}
+
+#gabarit_pied #gabarit_pied_left {
+	background-image: url('./images/pied-left.png');
+	background-repeat: repeat-y;
+	background-position: left;
+	float: left;
+	width: 14px;
+	height: 100%;
+}
+
+#gabarit_pied #gabarit_pied_right {
+	background-image: url('./images/pied-right.png');
+	background-repeat: repeat-y;
+	background-position: right;
+	float: right;
+	width: 14px;
+	height: 100%;
+}
+
+#gabarit_pied #gabarit_pied_contenu {
+	width: 850px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+#gabarit_pied #gabarit_pied_contenu .gabarit_pied_div {
+	float: left;
+	width: 250px;
+}
+
+#gabarit_pied #gabarit_pied_contenu .gabarit_pied_div_separation {
+	float: left;
+	width: 50px;
+}
+
+#gabarit_pied #gabarit_pied_contenu span {
+	color: #8BBFE7;
+	font-weight: bold;
+	font-size: 12pt;
+	display: block;
+	padding-bottom: 5px;
+	font-family: Verdana;
+}
+
+#gabarit_pied #gabarit_pied_contenu p {
+	color: #B7D0ED;
+	font-weight: bold;
+	text-align: left;
+	font-size: 10pt;
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+
+#gabarit_pied #gabarit_pied_copyright p {
+	color: #698AC6;
+	font-weight: bold;
+	text-align: center;
+	font-size: 10pt;
+	margin: -35px 0 0 0;
+}
+
+#gabarit_pied a {
+	color: #B7D0ED;
+	text-decoration: none;
+}
+
+#gabarit_pied a:hover {
+	color: yellow;
+	text-decoration: none;
+}
+
+table.gabarit_pub_bigbanner {
+    border-collapse: collapse;
+    border: none:
+}
+
+table.gabarit_pub_bigbanner td {
+    padding: 0;
+    vertical-align: top;
+}

@@ -1,0 +1,442 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre OpenGL</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Cours complet pour apprendre OpenGL moderne (v3.3 et supérieures), accompagné d'exemples simples. Une excellente ressource sur OpenGL pour débutants"/>
+	<meta name="author" content="Joey de Vries"/>
+	<meta name="keywords" content=""> 
+  	<script type="text/javascript" src="./js/jquery-1.7.2.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.2.51.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="http://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.2.51.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body>
+    <header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    </header>
+    <article  class="ArticleComplet" itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		<br/><header class="EnteteTitres">
+<h1 class="titre-article" itemprop="name">Apprendre OpenGL moderne </h1>
+<h2 class="soustitre-article">
+    <b>Septième partie : mise en pratique </b>
+  </h2>
+</header><nav class="nav-sommaire ArticleHorsLigne"><header><h1 class="TitreHeader StopArrondi ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" style="display:none;" src="./images/fleche-bas-bleue.png"/></h1></header><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+  
+	
+  
+  
+  
+  
+  
+  
+  
+  <li><a class="summaryIndent0" href="#LII">II. Affichage de texte</a><ul class="nav-sommaire-ul IndentationII">
+      
+      
+      
+      
+      <li><a class="summaryIndent1" href="#LII-A">II-A. Affichage classique de texte : images de fontes</a></li>
+      <li><a class="summaryIndent1" href="#LII-B">II-B. Affichage moderne de texte : FreeType</a><ul class="nav-sommaire-ul IndentationII-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent2" href="#LII-B-1">II-B-1. Les shaders</a></li>
+        <li><a class="summaryIndent2" href="#LII-B-2">II-B-2. Afficher une ligne de texte</a></li>
+      </ul></li>
+      <li><a class="summaryIndent1" href="#LII-C">II-C. Pour aller plus loin</a></li>
+      <li><a class="summaryIndent1" href="#LII-D">II-D. Remerciements</a></li>
+    </ul></li>
+  
+</ul></nav><section class="ArticleHorsLigne"><section class="articleBody" itemprop="articleBody"><div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="debogage.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><hr class="hr-separation"/></div></div>
+  
+	
+  
+  
+  
+  
+  
+  
+  
+  
+		<h1 class="TitreSection0" id="LII">II. Affichage de texte<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h1><div class="BlocSection0">
+      
+      <p>Lors de certaines étapes de votre aventure graphique, vous souhaiterez afficher du texte avec OpenGL. Contrairement à ce que vous pourriez penser, afficher une simple chaîne de caractères à l’écran est assez difficile avec une bibliothèque de bas niveau comme OpenGL. S’il vous suffit d’afficher les 128 premiers caractères, ce n’est pas trop compliqué. Les choses se corsent dès que chaque caractère peut avoir ses propres largeur, hauteur et marge. Selon votre langue, vous pourrez avoir besoin de plus de 128 caractères, ou encore vouloir afficher des expressions mathématiques ou des partitions de musique, voire écrire de haut en bas. Si vous prenez tout cela en compte, cela ne vous surprendra pas qu’une API de bas niveau comme OpenGL ne propose pas ces fonctionnalités.</p>
+      <p>Puisqu’il n’existe pas dans OpenGL d’outils pour le texte, il nous appartient de définir un système pour afficher du texte à l’écran. Nous n’avons pas de primitive graphique pour les caractères, il va falloir être créatif. Voici quelques idées : tracer des lettres avec <span class="italique"><span style="color:#0000ff;">GL_LINES</span></span>, créer des mailles 3D pour les lettres ou afficher des textures de caractères dans un environnement 3D.</p>
+      <p>Le plus souvent, les développeurs choisissent d’utiliser des textures pour afficher les caractères dans des rectangles 2D. Cela n’est pas trop difficile, mais obtenir les bons caractères sur une texture peut s’avérer délicat. Dans ce chapitre, nous verrons plusieurs méthodes et nous implémenterons une technique plus évoluée, mais aussi plus souple pour afficher du texte, avec la bibliothèque FreeType.</p>
+      
+		<h2 class="TitreSection1" id="LII-A">II-A. Affichage classique de texte : images de fontes<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection1">
+        
+        <p>Auparavant, afficher du texte consistait à choisir une fonte (ou en créer une) pour votre application puis en extraire les caractères et les coller dans une seule grande texture. Une telle texture, que l’on peut appeler une image de fonte (bitmap font) contient tous les symboles de caractères dans des zones prédéfinies de la texture. Ces symboles sont appelés des <span style="color:#009900;">glyphes</span>. Chaque glyphe est positionné à un endroit précis de la texture. Quand vous souhaitez afficher un caractère, vous sélectionnez le glyphe correspondant en affichant cette partie de l’image de fonte dans un rectangle 2D.</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/bitmapfont.png" alt="Feuille de sprites de caractères." width="512" height="312"/></figure></div>
+        <p>Vous voyez ici comment afficher le texte « OpenGL » avec une telle fonte, en sélectionnant chacun des glyphes de la texture (au moyen de leurs coordonnées relatives à la texture), pour être affichés dans des petits rectangles. En activant le <a class="lienArticle https" href="https://learnopengl.com/#!Advanced-OpenGL/Blending" target="_blank">blending</a> et avec un fond transparent, on obtient juste une chaîne affichée à l’écran. Cette fonte graphique a été générée avec le <a class="lienArticle simple" href="http://www.codehead.co.uk/cbfg/" target="_blank">générateur de fonte</a> de Codehead.</p>
+        <p>Cette approche a ses avantages et inconvénients. En premier lieu, c’est assez facile à mettre en œuvre et comme les images sont déjà prérendues, c’est assez performant. Cependant, ce n’est pas très souple. Si vous voulez changer de fonte, vous devez recompiler une fonte complète et de plus, ce système est limité à une seule résolution ; zoomer donnera très vite une image pixelisée. Enfin, on est limité à un petit ensemble de caractères et donc les caractères étendus ou Unicode ne sont pas envisageables. </p>
+        <p>Cette approche était (et reste) très courante, car elle est rapide et fonctionne sur toutes les machines, mais aujourd’hui des techniques plus souples existent. L’une d’entre elles consiste à charger des fontes TrueType grâce à la bibliothèque FreeType.</p>
+      </div>
+      
+		<h2 class="TitreSection1" id="LII-B">II-B. Affichage moderne de texte : FreeType<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection1">
+        
+        <p>FreeType est une bibliothèque de développement logiciel capable de charger des fontes, de les afficher dans une image bitmap et d’offrir un support pour les opérations relatives à ces fontes. C’est une bibliothèque largement diffusée, utilisée dans Mac OS X, Java, les consoles PlayStation, Linux et Android pour ne citer que ceux-là. Ce qui rend FreeType très intéressante est sa capacité à charger les fontes TrueType.</p>
+        <p>Une fonte TrueType est un ensemble de glyphes de caractères, non pas définis par des pixels ni par toute sorte de solutions statiques, mais par des équations mathématiques (des combinaisons de splines). Comme des images vectorielles, les images d’une fonte peuvent être générées de la taille que l’on veut, permettant d’obtenir des glyphes de taille quelconque sans perte de qualité.</p>
+        <p>FreeType peut être téléchargée à partir de ce <a class="lienArticle simple" href="http://www.freetype.org/" target="_blank">site web</a>. Vous pouvez compiler la bibliothèque vous-même à partir de leur code source ou utiliser leurs bibliothèques précompilées si votre système cible est dans la liste. Assurez-vous de lier <span class="italique">freetype.lib</span> et que votre compilateur pourra trouver les fichiers d’en-tête.</p>
+        <p>Incluez les en-têtes prévus :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2084">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2084" onclick="selectionCode('contenuCoded0e2084', 'IdTitreCode-d0e2084');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2084" class="contenuCode"><code class="cpp_literal3">#include </code><code class="cpp_literal1">&lt;ft2build.h&gt;</code>
+<code class="cpp_literal3">#include FT_FREETYPE_H</code></code></pre></div>
+        <div class="imgtext-warning">
+          <p>De la façon dont FreeType a été construite (du moins à l’heure où j’écris), vous ne pouvez pas placer les fichiers en-tête dans un nouveau répertoire, il faut les placer dans le répertoire racine de vos fichiers d’en-tête.</p>
+          <p><span class="codeinline">#include &lt;FreeType/ft2build.h&gt;</span> causera sans doute de sérieux conflits.</p>
+        </div>
+        <p>FreeType charge ces fontes TrueType et pour chaque glyphe génère une image bitmap et calcule plusieurs tailles. On peut extraire ces images pour générer des textures et positionner chaque glyphe de caractère en bonne place selon les tailles choisies.</p>
+        <p>Pour charger une fonte, il suffit d’initialiser la bibliothèque FreeType et charger la fonte en tant que <b><span style="color:#009900;">face</span></b>, comme FreeType les nomme. Ici nous chargeons la fonte TrueType <span class="italique">arial.ttf</span> qui a été copiée depuis le répertoire <span class="italique">Windows/Fonts</span>.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2120">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2120" onclick="selectionCode('contenuCoded0e2120', 'IdTitreCode-d0e2120');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2120" class="contenuCode">FT_Library ft;
+<code class="cpp_keyword1">if</code> (FT_Init_FreeType(<code class="cpp_operator">&amp;</code>ft))
+    <code class="cpp_function">std::</code>cout <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_literal1">"ERROR::FREETYPE: Could not init FreeType Library"</code> <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_function">std::</code>endl;
+FT_Face face;
+<code class="cpp_keyword1">if</code> (FT_New_Face(ft, <code class="cpp_literal1">"fonts/arial.ttf"</code>, <code class="cpp_digit">0</code>, <code class="cpp_operator">&amp;</code>face))
+    <code class="cpp_function">std::</code>cout <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_literal1">"ERROR::FREETYPE: Failed to load font"</code> <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_function">std::</code>endl;</code></pre></div>
+        <p>Chacune de ces fonctions FreeType retourne un entier non nul si une erreur survient. </p>
+        <p>Après avoir chargé la face, on doit définir la taille que nous voulons extraire de cette face :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2177">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2177" onclick="selectionCode('contenuCoded0e2177', 'IdTitreCode-d0e2177');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2177" class="contenuCode">FT_Set_Pixel_Sizes(face, <code class="cpp_digit">0</code>, <code class="cpp_digit">48</code>);</code></pre></div>
+        <p>La fonction détermine les paramètres de hauteur et largeur de la fonte. Si <span class="codeinline">width</span> est laissé à 0, la face calcule dynamiquement la largeur en fonction de la hauteur. </p>
+        <p>Une face FreeType contient un ensemble de glyphes. On peut choisir un de ces glyphes comme étant le glyphe courant en appelant <span class="codeinline">FT_Load_Char()</span>. Ici, on choisit le glyphe du caractère ‘X’ :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2198">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2198" onclick="selectionCode('contenuCoded0e2198', 'IdTitreCode-d0e2198');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2198" class="contenuCode"><code class="cpp_keyword1">if</code> (FT_Load_Char(face, <code class="cpp_literal1">'X'</code>, FT_LOAD_RENDER))
+    <code class="cpp_function">std::</code>cout <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_literal1">"ERROR::FREETYTPE: Failed to load Glyph"</code> <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_function">std::</code>endl;</code></pre></div>
+        <p>En utilisant <span class="codeinline">FT_LOAD_RENDER</span> comme un des paramètres de chargement, nous demandons à FreeType de créer une image bitmap 8 bits en niveaux de gris, que nous pourrons accéder par <span class="codeinline">face-&gt;glyph-&gt;bitmap</span>. </p>
+        <p>Les glyphes que nous chargeons avec FreeType n’ont cependant pas la même taille (ce qui était le cas avec les images de fontes). L’image générée par FreeType est juste assez large pour contenir la partie visible du caractère. Par exemple, l’image du caractère ‘.’ est bien plus petite que celle du caractère ‘X’. Pour cette raison, FreeType charge aussi plusieurs tailles en spécifiant la largeur de chaque caractère et comment les positionner correctement. Ci-dessous une image FreeType qui montre toutes les dimensions calculées pour chaque glyphe.</p>
+        <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/glyph.png" alt="Image des métriques d'un glyple tel quel chargé par FreeType" width="388" height="253"/></figure></div>
+        <p>Chaque glyphe est défini par rapport à une ligne horizontale (figurée par la flèche horizontale), certains sont placés exactement sur cette ligne de base (comme ‘X’), et d’autres sont légèrement en dessous (comme ‘g’ ou ‘p’). Ces dimensions définissent exactement les décalages pour placer chaque glyphe sur la ligne de base, la largeur de chaque glyphe, et combien de pixels sont nécessaires avant le glyphe suivant. Ci-dessous une courte liste des propriétés dont on aura besoin :</p>
+        <ul class="ListeDVP">
+          <li><b>width</b> : la largeur (en pixels) de l’image, accessible par <span class="codeinline">face-&gt;glyph-&gt;bitmap.width</span>. </li>
+          <li><b>height</b> : la hauteur (en pixels) de l’image, accessible par <span class="codeinline">face-&gt;glyph-&gt;bitmap.rows</span>. </li>
+          <li><b>bearingX</b> : le repère gauche, c’est-à-dire la position horizontale (en pixels) de l’image relative à l’origine, accessible par <span class="codeinline">face-&gt;glyph-&gt;bitmap_left</span>. </li>
+          <li><b>bearingY</b> : l’œil, c’est-à-dire la position verticale (en pixels) de l’image relative à l’origine, accessible par <span class="codeinline">face-&gt;glyph-&gt;bitmap_top</span>.</li>
+          <li><b>Advance</b> : l’empattement, c’est-à-dire la distance horizontale (en 1/64e de pixels) de l’origine du caractère au caractère suivant, accessible par <span class="codeinline">face-&gt;glyph-&gt;advance.x</span>.</li>
+        </ul>
+        <p>On pourrait charger un glyphe, retrouver ses dimensions et générer une texture à chaque fois que l’on voudrait afficher un caractère à l’écran, mais ce serait peu efficace de faire cela à chaque image. Il vaut mieux mémoriser les données quelque part et les reprendre à chaque affichage du caractère. Nous définissons une structure que nous mémorisons dans une <span class="codeinline">map</span>.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2287">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2287" onclick="selectionCode('contenuCoded0e2287', 'IdTitreCode-d0e2287');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2287" class="contenuCode"><code class="cpp_keyword3">struct</code> Character <code class="cpp_operator">{</code>
+ GLuint     TextureID;    <code class="cpp_comment2">// Identificateur de la texture du glyphe</code>
+ <code class="cpp_function">glm::</code>ivec2 Size;          <code class="cpp_comment2">// Taille du glyphe</code>
+ <code class="cpp_function">glm::</code>ivec2 Bearing;    <code class="cpp_comment2">// Approche gauche et œil du glyphe</code>
+ GLuint     Advance;     <code class="cpp_comment2">// Empattement du glyphe</code>
+<code class="cpp_operator">}</code>;
+<code class="cpp_function">std::</code>map<code class="cpp_operator">&lt;</code>GLchar, Character<code class="cpp_operator">&gt;</code> Characters;</code></pre></div>
+        <p>Dans ce tutoriel, nous simplifions en nous limitant aux 128 premiers caractères de la table ASCII. Pour chaque caractère, nous générons une texture et mémorisons les données dans une structure que nous ajoutons à la table de hachage <span class="codeinline">Characters</span><span class="italique">. </span>De cette façon, toutes les données nécessaires pour afficher chaque caractère seront disponibles pour un usage ultérieur.</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2333">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2333" onclick="selectionCode('contenuCoded0e2333', 'IdTitreCode-d0e2333');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2333" class="contenuCode">glPixelStorei(GL_UNPACK_ALIGNMENT, <code class="cpp_digit">1</code>); <code class="cpp_comment2">// Désactiver la restriction d’alignement d’octets</code>
+<code class="cpp_keyword1">for</code> (GLubyte c <code class="cpp_operator">=</code> <code class="cpp_digit">0</code>; c <code class="cpp_operator">&lt;</code> <code class="cpp_digit">128</code>; c<code class="cpp_operator">++</code>)
+<code class="cpp_operator">{</code>
+    <code class="cpp_comment2">// Chargement du glyphe du caractère</code>
+    <code class="cpp_keyword1">if</code> (FT_Load_Char(face, c, FT_LOAD_RENDER))
+    <code class="cpp_operator">{</code>
+        <code class="cpp_function">std::</code>cout <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_literal1">"ERROR::FREETYTPE: Failed to load Glyph"</code> <code class="cpp_operator">&lt;&lt;</code> <code class="cpp_function">std::</code>endl;
+        <code class="cpp_keyword1">continue</code>;
+    <code class="cpp_operator">}</code>
+    <code class="cpp_comment2">// Générer la texture</code>
+   GLuint texture;
+   glGenTextures(<code class="cpp_digit">1</code>, <code class="cpp_operator">&amp;</code>texture);
+   glBindTexture(GL_TEXTURE_2D, texture);
+   glTexImage2D( GL_TEXTURE_2D,
+                            <code class="cpp_digit">0</code>,
+                            GL_RED,
+                            face→glyph→bitmap.width,
+                            face→glyph→bitmap.rows,
+                            <code class="cpp_digit">0</code>,
+                            GL_RED,
+                            GL_UNSIGNED_BYTE,
+                            face→glyph→bitmap.buffer);
+    <code class="cpp_comment2">// Fixer les options de la texture</code>
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    <code class="cpp_comment2">// Mémoriser le caractère pour un usage ultérieur</code>
+    Character character <code class="cpp_operator">=</code> <code class="cpp_operator">{</code>
+        texture,
+        <code class="cpp_function">glm::</code>ivec2(face<code class="cpp_operator">-&gt;</code>glyph<code class="cpp_operator">-&gt;</code>bitmap.width, face→glyph→bitmap.rows),
+        <code class="cpp_function">glm::</code>ivec2(face<code class="cpp_operator">-&gt;</code>glyph<code class="cpp_operator">-&gt;</code>bitmap_left, face→glyph→bitmap_top),
+        face→glyph→advance.x
+        <code class="cpp_operator">}</code>;
+    Characters.insert(<code class="cpp_function">std::</code>pair<code class="cpp_operator">&lt;</code>GLchar, Character<code class="cpp_operator">&gt;</code>(c, character));
+<code class="cpp_operator">}</code></code></pre></div>
+        <p>On boucle sur les 128 caractères de la table ASCII et on retrouve leur glyphe. Pour chaque caractère, on génère une texture, on positionne les options et les dimensions. À noter que l’on utilise <span class="codeinline">GL_RED</span> pour l’argument <span class="codeinline">internalFormat</span> de la texture, ainsi que pour l’argument <span class="codeinline">format</span>. L‘image générée à partir du glyphe est une image 8 bits en niveaux de gris où chaque couleur est représentée sur un octet. Pour cette raison, nous mémoriserons chaque octet de l’image comme la valeur d’une couleur de texture. Nous réalisons cela en créant une texture dans laquelle chaque octet correspond à la composante rouge (premier octet du vecteur couleur). Puisque nous n’utilisons qu’un seul octet pour représenter les couleurs de la texture, il faut prendre garde à une restriction d’OpenGL :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2464">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2464" onclick="selectionCode('contenuCoded0e2464', 'IdTitreCode-d0e2464');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2464" class="contenuCode">glPixelStorei(GL_UNPACK_ALIGNMENT, <code class="cpp_digit">1</code>);</code></pre></div>
+        <p>OpenGL requiert que les textures aient une taille multiple de 4 octets (pour des raisons d’alignement). En principe ce n’est pas un problème puisque la plupart des textures ont une taille multiple de 4 et/ou utilisent 4 octets par pixel, mais puisque nous n’utilisons qu’un octet par pixel, elles peuvent avoir n’importe quelle taille. En paramétrant l’absence d’alignement à 1, nous assurons qu’il n’y aura pas de problème d’alignement (ce qui provoquerait des erreurs en mémoire).</p>
+        <p>Assurez-vous de supprimer les ressources FreeType quand vous avez fini de traiter les glyphes :</p>
+        <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2476">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2476" onclick="selectionCode('contenuCoded0e2476', 'IdTitreCode-d0e2476');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2476" class="contenuCode">FT_Done_Face(face);
+FT_Done_FreeType(ft);</code></pre></div>
+        
+		<h3 class="TitreSection2" id="LII-B-1">II-B-1. Les shaders<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection2">
+          
+          <p>Pour effectivement afficher les glyphes, nous utiliserons le vertex shader suivant : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2487">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2487" onclick="selectionCode('contenuCoded0e2487', 'IdTitreCode-d0e2487');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2487" class="contenuCode"><code class="glsl_keyword2">#</code><code class="glsl_markup">version</code><code class="glsl_keyword2"> </code><code class="glsl_digit">330</code><code class="glsl_keyword2"> core</code>
+<code class="glsl_keyword1">layout</code> <code class="glsl_operator">(</code>location <code class="glsl_operator">=</code> <code class="glsl_digit">0</code>) <code class="glsl_keyword1">in</code> <code class="glsl_keyword4">vec4</code> vertex; <code class="glsl_comment2">// &lt;vec2 pos, vec2 tex&gt;</code>
+<code class="glsl_keyword1">out</code> <code class="glsl_keyword4">vec2</code> TexCoords;
+<code class="glsl_keyword1">uniform</code> <code class="glsl_keyword4">mat4</code> projection;
+<code class="glsl_keyword4">void</code> <code class="glsl_function">main</code><code class="glsl_operator">(</code>)
+<code class="glsl_operator">{</code>
+    <code class="glsl_keyword2">gl_Position</code> <code class="glsl_operator">=</code> projection <code class="glsl_operator">*</code> <code class="glsl_keyword4">vec4</code><code class="glsl_operator">(</code>vertex.xy, <code class="glsl_digit">0</code>.<code class="glsl_digit">0</code>, <code class="glsl_digit">1</code>.<code class="glsl_digit">0</code>);
+    TexCoords <code class="glsl_operator">=</code> vertex.zw;
+<code class="glsl_operator">}</code></code></pre></div>
+          <p>Nous combinons la position et les cordonnées de texture dans un <span class="codeinline">vec4</span>. Le vertex shader multiplie les coordonnées par une matrice de projection et transmet les coordonnées de texture au fragment shader :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2581">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2581" onclick="selectionCode('contenuCoded0e2581', 'IdTitreCode-d0e2581');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2581" class="contenuCode"><code class="glsl_keyword2">#</code><code class="glsl_markup">version</code><code class="glsl_keyword2"> </code><code class="glsl_digit">330</code><code class="glsl_keyword2"> core</code>
+<code class="glsl_keyword1">in</code> <code class="glsl_keyword4">vec2</code> TexCoords;
+<code class="glsl_keyword1">out</code> <code class="glsl_keyword4">vec4</code> color;
+<code class="glsl_keyword1">uniform</code> <code class="glsl_keyword4">sampler2D</code> text;
+<code class="glsl_keyword1">uniform</code> <code class="glsl_keyword4">vec3</code> textColor;
+<code class="glsl_keyword4">void</code> <code class="glsl_function">main</code><code class="glsl_operator">(</code>)
+<code class="glsl_operator">{</code>
+    <code class="glsl_keyword4">vec4</code> sampled <code class="glsl_operator">=</code> <code class="glsl_keyword4">vec4</code><code class="glsl_operator">(</code><code class="glsl_digit">1</code>.<code class="glsl_digit">0</code>, <code class="glsl_digit">1</code>.<code class="glsl_digit">0</code>, <code class="glsl_digit">1</code>.<code class="glsl_digit">0</code>, <code class="glsl_function">texture</code><code class="glsl_operator">(</code>text, TexCoords).r);
+    color <code class="glsl_operator">=</code> <code class="glsl_keyword4">vec4</code><code class="glsl_operator">(</code>textColor, <code class="glsl_digit">1</code>.<code class="glsl_digit">0</code>) <code class="glsl_operator">*</code> sampled;
+<code class="glsl_operator">}</code></code></pre></div>
+          <p>Le fragment shader utilise deux variables uniformes : l’une pour l’image du glyphe en niveaux de gris, l’autre est une couleur pour ajuster la couleur finale du texte. Nous échantillonnons d’abord la couleur de la texture. Cette couleur est codée sur la seule composante rouge, nous utilisons la composante <span class="codeinline">r</span> de la texture comme valeur de transparence. En jouant sur la valeur alpha de la couleur, la couleur résultante sera transparente pour la couleur du fond des glyphes et opaque pour la couleur des pixels du caractère. Nous multiplions aussi les couleurs RGB par la variable uniforme <span class="codeinline">textColor</span> pour la couleur du texte.</p>
+          <p>Il faut activer le <a class="lienArticle https" href="https://learnopengl.com/#!Advanced-OpenGL/Blending" target="_blank">blending</a> pour que cela fonctionne : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2696">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2696" onclick="selectionCode('contenuCoded0e2696', 'IdTitreCode-d0e2696');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2696" class="contenuCode">glEnable(GL_BLEND);
+glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);</code></pre></div>
+          <p>Pour la matrice de projection, nous choisissons une projection orthogonale. Pour afficher du texte, nul besoin de perspective (en général) et l’utilisation d’une projection orthogonale nous permet de spécifier les coordonnées des sommets directement en coordonnées d’affichage si nous la définissons ainsi : </p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2702">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2702" onclick="selectionCode('contenuCoded0e2702', 'IdTitreCode-d0e2702');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2702" class="contenuCode"><code class="cpp_function">glm::</code>mat4 projection <code class="cpp_operator">=</code> <code class="cpp_function">glm::</code>ortho(<code class="cpp_digit">0.0</code>f, <code class="cpp_digit">800.0</code>f, <code class="cpp_digit">0.0</code>f, <code class="cpp_digit">600.0</code>f)</code></pre></div>
+          <p>Nous fixons le bas de la projection à <span class="codeinline">0.0f</span> et le haut égal à la hauteur de la fenêtre d’affichage. Par conséquent, nous spécifions les coordonnées avec des valeurs de <span class="codeinline">y</span> s’étendant du bas de la fenêtre (<span class="codeinline">0.0f</span>) jusqu’en haut (<span class="codeinline">600.0f</span>). Et donc le point (<span class="codeinline">0.0</span>, <span class="codeinline">0.0</span>) correspond au coin en bas à gauche.</p>
+          <p>Il reste à créer un VBO et un VAO pour le rendu des rectangles. Pour l’instant, nous réservons assez de mémoire en initialisant le VBO de façon à pouvoir mettre à jour la mémoire du VBO lors du rendu des caractères.</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2749">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2749" onclick="selectionCode('contenuCoded0e2749', 'IdTitreCode-d0e2749');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2749" class="contenuCode">GLuint VAO, VBO;
+glGenVertexArrays(<code class="cpp_digit">1</code>, <code class="cpp_operator">&amp;</code>VAO);
+glGenBuffers(<code class="cpp_digit">1</code>, <code class="cpp_operator">&amp;</code>VBO);
+glBindVertexArray(VAO);
+glBindBuffer(GL_ARRAY_BUFFER, VBO);
+glBufferData(GL_ARRAY_BUFFER, <code class="cpp_keyword1">sizeof</code>(GLfloat) <code class="cpp_operator">*</code> <code class="cpp_digit">6</code> <code class="cpp_operator">*</code> <code class="cpp_digit">4</code>, <code class="cpp_literal2">NULL</code>, GL_DYNAMIC_DRAW);
+glEnableVertexAttribArray(<code class="cpp_digit">0</code>);
+glVertexAttribPointer(<code class="cpp_digit">0</code>, <code class="cpp_digit">4</code>, GL_FLOAT, GL_FALSE, <code class="cpp_digit">4</code> <code class="cpp_operator">*</code> <code class="cpp_keyword1">sizeof</code>(GLfloat), <code class="cpp_digit">0</code>);
+glBindBuffer(GL_ARRAY_BUFFER, <code class="cpp_digit">0</code>);
+glBindVertexArray(<code class="cpp_digit">0</code>);</code></pre></div>
+          <p>Les rectangles 2D nécessitent 6 sommets de 4 réels chacun, on réserve ainsi 6*4 réels en mémoire. Étant donné que nous mettrons à jour très souvent le contenu du VBO, on alloue la mémoire avec <span class="codeinline">GL_DYNAMIC_DRAW</span>. </p>
+        </div>
+        
+		<h3 class="TitreSection2" id="LII-B-2">II-B-2. Afficher une ligne de texte<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h3><div class="BlocSection2">
+          
+          <p>Pour afficher un caractère, on extrait la structure correspondante de la table de hachage <span class="codeinline">Characters</span> et on calcule les dimensions du rectangle en utilisant les dimensions du caractère. On peut ensuite générer dynamiquement un ensemble de six sommets que nous utiliserons pour rafraîchir le contenu de la mémoire gérée par le VBO avec <span class="codeinline">glBufferSubData()</span>. </p>
+          <p>On crée une fonction <span class="codeinline">RenderText()</span> pour afficher une chaîne de caractères :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e2836">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e2836" onclick="selectionCode('contenuCoded0e2836', 'IdTitreCode-d0e2836');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e2836" class="contenuCode"><code class="cpp_keyword1">void</code> RenderText(Shader <code class="cpp_operator">&amp;</code>s, <code class="cpp_function">std::</code>string text, GLfloat x, GLfloat y, GLfloat scale, <code class="cpp_function">glm::</code>vec3 color)
+<code class="cpp_operator">{</code>
+    <code class="cpp_comment2">// Activation du rendu</code>
+    s.Use();
+    glUniform3f(glGetUniformLocation(s.Program, <code class="cpp_literal1">"textColor"</code>), color.x, color.y, color.z);
+    glActiveTexture(GL_TEXTURE0);
+    glBindVertexArray(VAO);
+    <code class="cpp_comment2">// Boucle sur tous les caractères</code>
+ <code class="cpp_function">std::string::</code>const_iterator c;
+ <code class="cpp_keyword1">for</code> (c <code class="cpp_operator">=</code> text.begin(); c <code class="cpp_operator">!=</code> text.end(); c<code class="cpp_operator">++</code>)
+ <code class="cpp_operator">{</code>
+        Character ch <code class="cpp_operator">=</code> Characters[<code class="cpp_operator">*</code>c];
+        GLfloat xpos <code class="cpp_operator">=</code> x <code class="cpp_operator">+</code> ch.Bearing.x <code class="cpp_operator">*</code> scale;
+        GLfloat ypos <code class="cpp_operator">=</code> y <code class="cpp_operator">-</code> (ch.Size.y <code class="cpp_operator">-</code> ch.Bearing.y) <code class="cpp_operator">*</code> scale;
+        GLfloat w <code class="cpp_operator">=</code> ch.Size.x <code class="cpp_operator">*</code> scale;
+        GLfloat h <code class="cpp_operator">=</code> ch.Size.y <code class="cpp_operator">*</code> scale;
+        <code class="cpp_comment2">// Mise à jour du VBO</code>
+        GLfloat vertices[<code class="cpp_digit">6</code>][<code class="cpp_digit">4</code>] <code class="cpp_operator">=</code> <code class="cpp_operator">{</code>
+            <code class="cpp_operator">{</code> xpos,     ypos <code class="cpp_operator">+</code> h,   <code class="cpp_digit">0.0</code>, <code class="cpp_digit">0.0</code> <code class="cpp_operator">}</code>,
+            <code class="cpp_operator">{</code> xpos,     ypos,       <code class="cpp_digit">0.0</code>, <code class="cpp_digit">1.0</code> <code class="cpp_operator">}</code>,
+            <code class="cpp_operator">{</code> xpos <code class="cpp_operator">+</code> w, ypos,       <code class="cpp_digit">1.0</code>, <code class="cpp_digit">1.0</code> <code class="cpp_operator">}</code>,
+            <code class="cpp_operator">{</code> xpos,     ypos <code class="cpp_operator">+</code> h,   <code class="cpp_digit">0.0</code>, <code class="cpp_digit">0.0</code> <code class="cpp_operator">}</code>,
+            <code class="cpp_operator">{</code> xpos <code class="cpp_operator">+</code> w, ypos,       <code class="cpp_digit">1.0</code>, <code class="cpp_digit">1.0</code> <code class="cpp_operator">}</code>,
+            <code class="cpp_operator">{</code> xpos <code class="cpp_operator">+</code> w, ypos <code class="cpp_operator">+</code> h,   <code class="cpp_digit">1.0</code>, <code class="cpp_digit">0.0</code> <code class="cpp_operator">}</code>
+       <code class="cpp_operator">}</code>;
+        <code class="cpp_comment2">// Rendu du glyphe sur le rectangle</code>
+        glBindTexture(GL_TEXTURE_2D, ch.textureID);
+        <code class="cpp_comment2">// Mise à jour de la mémoire du VBO</code>
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferSubData(GL_ARRAY_BUFFER, <code class="cpp_digit">0</code>, <code class="cpp_keyword1">sizeof</code>(vertices), vertices) ;
+        glBindBuffer(GL_ARRAY_BUFFER, <code class="cpp_digit">0</code>);
+        <code class="cpp_comment2">// Rendu du rectangle</code>
+        glDrawArrays(GL_TRIANGLES, <code class="cpp_digit">0</code>, <code class="cpp_digit">6</code>);
+        <code class="cpp_comment2">// Avancer le curseur au glyphe suivant (noter que l’avance est calculée en 1/64e pixels)</code>
+        x <code class="cpp_operator">+=</code> (ch.Advance <code class="cpp_operator">&gt;&gt;</code> <code class="cpp_digit">6</code>) <code class="cpp_operator">*</code> scale; <code class="cpp_comment2">// Décalage à droite de 6 pour obtenir la valeur en pixels</code>
+    <code class="cpp_operator">}</code>
+    glBindVertexArray(<code class="cpp_digit">0</code>);
+    glBindTexture(GL_TEXTURE_2D, <code class="cpp_digit">0</code>);
+<code class="cpp_operator">}</code></code></pre></div>
+          <p>Le contenu de la fonction devrait parler de lui-même : nous calculons la position de l’origine du rectangle (<span class="codeinline">xposyposwh</span> et ) ainsi que sa taille ( et ) puis on génère un ensemble de six sommets pour former le rectangle ; noter que nous effectuons une mise à l’échelle avec <span class="codeinline">scale</span>. On met à jour le contenu du VBO et on affiche le rectangle. </p>
+          <p>Le code suivant mérite cependant un peu d’attention :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3092">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3092" onclick="selectionCode('contenuCoded0e3092', 'IdTitreCode-d0e3092');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3092" class="contenuCode">GLfloat ypos <code class="cpp_operator">=</code> y <code class="cpp_operator">-</code> (ch.Size.y <code class="cpp_operator">-</code> ch.Bearing.y);</code></pre></div>
+          <p>Certains caractères (comme ‘p’ ou ‘g’) sont affichés légèrement en dessous de la ligne de base, et le rectangle doit aussi être positionné légèrement décalé en <span class="codeinline">y</span>. La valeur de ce décalage de <span class="codeinline">ypos</span> peut être déterminée avec les dimensions du glyphe :</p>
+          <div class="div-figure"><figure class="figure-center"><img class="figure-img-caption" src="./images/glyph_offset.png" alt="Décalage sous la ligne de base d'un glyphe pour positionner le rectangle 2D." width="388" height="253"/></figure></div>
+          <p>Cette distance, c’est-à-dire le décalage que l’on doit appliquer vers le bas, est figurée par la flèche rouge. Comme on le voit, cette distance se calcule comme la différence entre la hauteur du glyphe et la dimension <span class="codeinline">bearingY</span>. Cette valeur est nulle pour les caractères qui sont sur la ligne de base alors qu’elle est positive pour les caractères comme ‘g’ ou ‘j’.</p>
+          <p>Si vous avez tout exécuté correctement, vous devriez pouvoir afficher des chaînes de caractères avec les lignes suivantes :</p>
+          <div class="code_et_titre"><div class="titre_des_codes" id="IdTitreCode-d0e3124">&nbsp;<div class="selectionner_code"><span class="selectionner_code LienSelectionne" id="code-d0e3124" onclick="selectionCode('contenuCoded0e3124', 'IdTitreCode-d0e3124');">S&eacute;lectionnez</span></div></div><pre class="code_uniquement" style="overflow:auto;"><code id="contenuCoded0e3124" class="contenuCode">RenderText(shader, <code class="cpp_literal1">"This is sample text"</code>, <code class="cpp_digit">25.0</code>f, <code class="cpp_digit">25.0</code>f, <code class="cpp_digit">1.0</code>f, <code class="cpp_function">glm::</code>vec3(<code class="cpp_digit">0.5</code>, <code class="cpp_digit">0.8</code>f, <code class="cpp_digit">0.2</code>f));
+RenderText(shader, <code class="cpp_literal1">"(C) LearnOpenGL.com"</code>, <code class="cpp_digit">540.0</code>f, <code class="cpp_digit">570.0</code>f, <code class="cpp_digit">0.5</code>f, <code class="cpp_function">glm::</code>vec3(<code class="cpp_digit">0.3</code>, <code class="cpp_digit">0.7</code>f, <code class="cpp_digit">0.9</code>f));</code></pre></div>
+          <p>Vous devriez obtenir l’image suivante :</p>
+          <div class="div-figure"><figure class="figure-center"><a data-rel="lightbox[article]" href="./images/text_rendering.png"><img class="ImgCliquable figure-img-caption" src="./images/text_rendering.png" alt="Image d'un rendu de texte avec OpenGL et FreeType." width="415" height="325"/></a></figure></div>
+          <p>Vous trouverez le code de cet exemple <a class="lienArticle https" href="https://learnopengl.com/code_viewer.php?code=in-practice/text_rendering" target="_blank">ici</a>. </p>
+          <p>Pour vous donner une idée du calcul des sommets des rectangles, on peut désactiver le blending pour mieux voir leurs dimensions et leur position :</p>
+          <div class="div-figure"><figure class="figure-center"><a data-rel="lightbox[article]" href="./images/text_rendering_quads.png"><img class="ImgCliquable figure-img-caption" src="./images/text_rendering_quads.png" alt="Image du rendu des rectangles sans transparence pour le rendu du texte en OpenGL." width="415" height="325"/></a></figure></div>
+          <p>Ici, on voit bien que la plupart des rectangles reposent sur la ligne de base tandis que certains sont décalés vers le bas.</p>
+        </div>
+      </div>
+      
+		<h2 class="TitreSection1" id="LII-C">II-C. Pour aller plus loin<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection1">
+        
+        <p>Ce chapitre montre une technique d’affichage de texte avec les fontes TrueType en utilisant la bibliothèque FreeType. Cette approche est souple, permet la mise à l’échelle, et fonctionne avec beaucoup de codes de caractères. Cependant, elle peut s’avérer excessive pour votre application, car elle requiert de générer et rendre une texture pour chaque glyphe.</p>
+        <p>Les images de fontes sont plus simples et rapides, car elles ne requièrent qu’une seule texture pour tous les caractères. La meilleure approche est de combiner les deux façons en générant dynamiquement une texture d’image de fonte représentant tous les glyphes de caractères chargés avec FreeType. Cela décharge le moteur de rendu de tous ces changements de texture et selon comment les glyphes sont rangés peut améliorer nettement les performances. </p>
+        <p>Une autre question avec les fontes FreeType vient de ce que les textures sont mémorisées avec une fonte de taille fixe et une mise à l’échelle importante conduit à des bords crénelés. De plus, les rotations appliquées aux glyphes les rendront flous. Cela peut être atténué : au lieu de mémoriser la couleur réelle des pixels, on mémorise la distance au contour le plus proche du glyphe pour chaque pixel. Cette technique est appelée <span style="color:#009900;">« signed distance fields »</span>, et Valve a publié un <a class="lienArticle simple" href="http://www.valvesoftware.com/publications/2007/SIGGRAPH2007_AlphaTestedMagnification.pdf" target="_blank">article</a> voilà quelques années sur sa mise en œuvre qui fonctionne très bien pour des applications de rendus 3D. </p>
+      </div>
+      
+		<h2 class="TitreSection1" id="LII-D">II-D. Remerciements<a class="HautPage" href="#" title="Haut de page">&#9650;</a></h2><div class="BlocSection1">
+        
+        <p>Ce tutoriel est une traduction réalisée par Jean-Michel Fray dont l’original a été écrit par Joey de Vries et qui est disponible sur le site <a class="lienArticle https" href="https://learnopengl.com/In-Practice/Text-Rendering">Learn OpenGL</a>.</p>
+      </div>
+    </div>
+  
+<div class="cachee"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="debogage.html"><img title="Page précédente" alt="précédent" src="./images/kitprecedent.png"/></a><a class="lientelechargement" href="sommaire.html"><img title="Revenir au sommaire" alt="sommaire" src="./images/kitsommaire.png"/></a><hr class="hr-separation"/></div></div></section></section>
+  
+	
+  
+  
+  
+  
+  
+  
+  
+  <section class="ArticleHorsLigne"><section class="SectionNoteBasPage articleBody"><hr class="hr-separation clear"/></section></section>
+  
+<p class="licence">Les sources présentées sur cette page sont libres de droits et vous pouvez les utiliser à votre convenance. Par contre, la page de présentation constitue une &oelig;uvre intellectuelle protégée par les droits d'auteur. Copyright &copy;2018 Joey de Vries.
+				Aucune reproduction, même partielle, ne peut être faite de ce site et de l'ensemble de son contenu :
+			textes, documents, images, etc. sans l'autorisation expresse de l'auteur. Sinon vous encourez selon la loi jusqu'à trois ans de prison et jusqu'à 300 000 € de dommages et intérêts.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		

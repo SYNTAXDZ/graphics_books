@@ -1,0 +1,254 @@
+
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+  	<title>Apprendre OpenGL</title>
+  	<meta charset="UTF-8" />
+	<meta content="developpez-com" name="generator">
+	<meta name="description" content="Cours complet pour apprendre OpenGL moderne (v3.3 et supérieures), accompagné d'exemples simples. Une excellente ressource sur OpenGL pour débutants"/>
+	<meta name="author" content="Joey de Vries"/>
+	<meta name="keywords" content=""> 
+  	<script type="text/javascript" src="./js/jquery-1.7.2.js"></script>
+  	<link rel="shortcut icon" type="image/x-icon" href="https://www.developpez.com/template/favicon.ico" />
+                                                 
+    <link rel="stylesheet" type="text/css" media="screen" href="./code.css" />
+  	<link rel="stylesheet" type="text/css" href="./mini-gabarit0.css" />
+  	<link rel="stylesheet" type="text/css" href="./lightbox.2.51.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./developpez-kit-generation.css" />
+    
+
+	
+    <!--[if IE 9]><link rel="stylesheet" type="text/css" href="./ie9.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="./ie8.css" /><![endif]-->
+    <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="./ie.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="./ie7.css" /><![endif]-->
+    <!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="./ie6.css" /><![endif]-->
+    <!--[if lt IE 9]><script type="text/javascript" src="./js/html5_ie.js"></script><![endif]-->
+ 
+    <script type="text/javascript" src="http://www.developpez.com/template/kit/mathjax-dvp/MathJax.js?config=TeX-AMS-MML_HTMLorMML&locale=fr"></script>
+    <script type="text/javascript" src="./js/developpez-kit-generation.js"></script>
+    <script type="text/javascript" src="./js/fonctions-kit.js"></script>
+    <script type="text/javascript" src="./js/lightbox.2.51.js"></script>
+    <script type="text/javascript" src="./js/LecteurSWF.js"></script>
+
+  </head>
+  <body>
+    <header class="layout">
+      <div id="quicknav">	
+        <nav>	
+          <ul>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.net/forums/">Forums</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/cours/">Tutoriels</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://magazine.developpez.com/">Magazine</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://general.developpez.com/faq/">FAQs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://blog.developpez.com/">Blogs</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://projets.developpez.com/">Projets</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://chat.developpez.com/">Chat</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://www.developpez.com/newsletter/">Newsletter</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://etudes.developpez.com/">Études</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://emploi.developpez.com/">Emploi</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/">Club</a>
+        		</li>
+        		<li>
+        			<a style="color: #B7D0ED;" href="https://club.developpez.com/contacts/">Contacts</a>
+        		</li>
+        	</ul>
+        </nav>
+      </div>
+    </header>
+    <article  class="ArticleComplet" itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="genre" content="informatique"/>
+      <meta itemprop="inLanguage" content="fr-FR"/>	
+
+		<section class="ArticleHorsLigne"><header class="EnteteTitres">
+<h1 class="titre-article" itemprop="name">Apprendre OpenGL moderne </h1>
+<h2 class="soustitre-article">
+    <b>Septième partie : mise en pratique </b>
+  </h2>
+</header><nav class="nav-sommaire"><header class="header-sommaire"><h1 class="TitreHeader StopArrondi ToggleGecko">Table des mati&egrave;res<img class="ToggleImgPlier" title="Plier" alt="Plier" src="./images/fleche-haut-bleue.png"/><img class="ToggleImgDeplier" title="Déplier" alt="Déplier" src="./images/fleche-bas-bleue.png" style="display:none;"/></h1></header><ul id="nav_sommaire_ul_principal" class="nav-sommaire-ul">
+    <li><a class="summaryIndent0" href="debogage.html">Débogage<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="debogage.html#LI">I. Débogage</a></li><li><ul class="nav-sommaire-ul IndentationI">
+      
+      
+      
+      <li><a class="summaryIndent2" href="debogage.html#LI-A">I-A. glGetError()</a></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-B">I-B. Extension debug output</a></li><li><ul class="nav-sommaire-ul IndentationI-B">
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="debogage.html#LI-B-1">I-B-1. Sortie de débogage avec GLFW</a></li>
+        <li><a class="summaryIndent3" href="debogage.html#LI-B-2">I-B-2. Filtrer la sortie de débogage</a></li>
+        <li><a class="summaryIndent3" href="debogage.html#LI-B-3">I-B-3. Retrouver l’origine de l’erreur</a></li>
+        <li><a class="summaryIndent3" href="debogage.html#LI-B-4">I-B-4. Affichages personnalisés des erreurs </a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-C">I-C. Déboguer les sorties des shaders</a></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-D">I-D. Compilateur GLSL de référence</a></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-E">I-E. Affichage d’un tampon de rendu</a></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-F">I-F. Logiciel externe de débogage</a></li><li><ul class="nav-sommaire-ul IndentationI-F">
+        
+        
+        
+        <li><a class="summaryIndent3" href="debogage.html#LI-F-1">I-F-1. RenderDoc</a></li>
+        <li><a class="summaryIndent3" href="debogage.html#LI-F-2">I-F-2. CodeXL</a></li>
+        <li><a class="summaryIndent3" href="debogage.html#LI-F-3">I-F-3. NVIDIA Nsight</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-G">I-G. Ressources supplémentaires</a></li>
+      <li><a class="summaryIndent2" href="debogage.html#LI-H">I-H. Remerciements</a></li>
+    </ul></li></ul></li>
+    <li><a class="summaryIndent0" href="affichage-de-texte.html">Affichage de texte<br/></a><ul class="nav-sommaire-ul"><li><a class="summaryIndent1" href="affichage-de-texte.html#LII">II. Affichage de texte</a></li><li><ul class="nav-sommaire-ul IndentationII">
+      
+      
+      
+      
+      <li><a class="summaryIndent2" href="affichage-de-texte.html#LII-A">II-A. Affichage classique de texte : images de fontes</a></li>
+      <li><a class="summaryIndent2" href="affichage-de-texte.html#LII-B">II-B. Affichage moderne de texte : FreeType</a></li><li><ul class="nav-sommaire-ul IndentationII-B">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="summaryIndent3" href="affichage-de-texte.html#LII-B-1">II-B-1. Les shaders</a></li>
+        <li><a class="summaryIndent3" href="affichage-de-texte.html#LII-B-2">II-B-2. Afficher une ligne de texte</a></li>
+      </ul></li>
+      <li><a class="summaryIndent2" href="affichage-de-texte.html#LII-C">II-C. Pour aller plus loin</a></li>
+      <li><a class="summaryIndent2" href="affichage-de-texte.html#LII-D">II-D. Remerciements</a></li>
+    </ul></li></ul></li>
+  </ul></nav>
+
+
+<div class="fixeMarge"><section itemprop="about" class="SectionSynopsis">
+    <p>Developpez.com a la joie d’accueillir une traduction en français du célèbre cours de grande qualité <a class="lienArticle https" href="https://learnopengl.com/">Learn OpenGL</a>. Au cours de celui-ci, vous apprendrez à programmer des applications graphiques 3D grâce à la bibliothèque OpenGL.</p>
+    <p>Ces tutoriels sont accessibles aux débutants, mais les connaisseurs ne s’ennuieront pas non plus grâce aux chapitres avancés.</p>
+    <p>Cette page vous amène à la septième partie du tutoriel, c’est-à-dire : la mise en pratique de tout ce qui a été vu précédemment. Plus particulièrement, vous apprendrez à déboguer vos applications graphiques et à y afficher du texte.</p>
+    <p>Vous pouvez retrouver les autres parties ci-dessous :</p>
+    <ul class="ListeDVP">
+      <li><a class="lienArticle https" href="https://opengl.developpez.com/tutoriels/apprendre-opengl/">introduction</a> ;</li>
+      <li><a class="lienArticle https" href="https://opengl.developpez.com/tutoriels/apprendre-opengl-2/">éclairage</a> ;</li>
+      <li><a class="lienArticle https" href="https://opengl.developpez.com/tutoriels/apprendre-opengl-3/">chargement de modèle</a> ;</li>
+      <li><a class="lienArticle https" href="https://opengl.developpez.com/tutoriels/apprendre-opengl-4/">OpenGL avancé</a> ;</li>
+      <li>éclairage avancé ;</li>
+      <li>PBR ;</li>
+      <li>mise en pratique.</li>
+    </ul>
+    <p><a href="https://www.developpez.net/forums/showthread.php?t=1846552" class="lienforum">Commentez</a> </p>
+  <a class="lienArticle Fr" title="Lire la version en ligne de l'article." href="debogage.html">Lire l'article.</a><p class="TextNbrVues">Article lu <span id="NbrVues">&nbsp;</span> fois.</p></section></div><div class="InfoAuthArtBook">
+	<section class="SectionAuteurs">
+	<header><h1 class="TitreHeader">Les deux auteur et traducteur</h1></header>
+<p class="auteur" itemprop="name" itemscope itemtype="http://schema.org/Person"><a itemprop="url" class="auteur" href="https://learnopengl.com/"><span itemprop="author">Joey de Vries</span></a></p>
+<p class="auteur" itemprop="name" itemscope itemtype="http://schema.org/Person"><span class="LabelTraducteur">Traducteur : </span><a itemprop="url" class="auteur" href="https://www.developpez.net/forums/u262796/jimif57/"><span itemprop="author">Jean-Michel Fray</span></a><a class="homepage" href="https://www.developpez.com/user/profil/262796/jimif57/"><img src="https://www.developpez.net/forums/images/ranks/pro.png" title="Profil Pro" alt="Profil Pro" style="vertical-align:middle;"/></a></p>
+</section>
+<section class="SectionInformationArticle">
+<header><h1 class="TitreHeader">L'article</h1></header>
+
+<p class="InfoArticle">Publi&eacute;&nbsp;le&nbsp;<span itemprop="datePublished">5 juillet 2018 </span></p>
+    
+    
+<p class="InfoArticle"><img alt="Public visé : tout le monde" src="./images/public-vise-1.png"/></p>
+  <span class="lienversionenligne"><a class="lientelechargement" href="debogage.html" title="Lire la version en ligne de l'article.">Version en ligne</a></span><p>
+<span class="lientelechargementpdf"><a class="lientelechargement" href="http://opengl.developpez.com/tutoriels/apprendre-opengl-7/.pdf" title="Télécharger la version PDF de cet article.">Version PDF</a></span>
+<span class="lientelechargementzip"><a class="lientelechargement" href="http://opengl.developpez.com/tutoriels/apprendre-opengl-7/.zip" title="Télécharger la version HTML de cet article.">Version hors-ligne</a></span></p>
+<p><span class="lientelechargementebook"><a class="lientelechargement" href="http://opengl.developpez.com/tutoriels/apprendre-opengl-7/.epub" title="Télécharger la version ePub de l'article compatible avec la plupart des liseuses non Kindle (Amazon).">ePub</a></span>, <span class="lientelechargementebook"><a class="lientelechargement" href="http://opengl.developpez.com/tutoriels/apprendre-opengl-7/.azw" title="Télécharger la version Azw spécifique aux liseuses Kindle (Amazon).">Azw</a></span> et <span class="lientelechargementebook"><a class="lientelechargement" href="http://opengl.developpez.com/tutoriels/apprendre-opengl-7/.mobi" title="Télécharger la version Mobi de l'article compatible avec les liseuses Amazon.">Mobi</a></span></p><p class="ParaLienLireArticle"><a class="LienLireArticle" href="debogage.html">Lire l'article</a></p>
+</section>
+<section class="SectionBookmarks">
+<header><h1 class="TitreHeader">Liens&nbsp;sociaux</h1></header>
+<div class="InfoBookmarks"><?php echo DoBookMarks("Apprendre OpenGL moderne ",'http://opengl.developpez.com/tutoriels/apprendre-opengl-7/'); ?></div>
+</section></div><section class="articleBody"><div class="barreNavigation"><hr class="hr-separation"/><a class="lientelechargement" href="debogage.html"><img alt="suivant" title="Page suivante" src="./images/kitsuivant.png"/></a><hr class="hr-separation"/></div></section><p class="licence">Les sources présentées sur cette page sont libres de droits et vous pouvez les utiliser à votre convenance. Par contre, la page de présentation constitue une &oelig;uvre intellectuelle protégée par les droits d'auteur. Copyright &copy;2018 Joey de Vries.
+				Aucune reproduction, même partielle, ne peut être faite de ce site et de l'ensemble de son contenu :
+			textes, documents, images, etc. sans l'autorisation expresse de l'auteur. Sinon vous encourez selon la loi jusqu'à trois ans de prison et jusqu'à 300 000 € de dommages et intérêts.</p>
+    </article>
+
+<footer class="layout" role="contentinfo">				
+  <div id="gabarit_footer">
+		<div id="gabarit_footer_right">&nbsp;</div>
+		<div id="gabarit_footer_left">&nbsp;</div>
+		
+		<p id="responsable">			
+			<strong>Responsable des outils : Developpez.com</strong>
+			 - <a href="https://www.developpez.net/forums/">Contacter par le forum</a>
+		</p>
+	</div>
+	
+  <div id="gabarit_pied">
+  	<div id="gabarit_pied_right">&nbsp;</div>
+  
+  	<div id="gabarit_pied_left">&nbsp;</div>
+  
+  	<div id="gabarit_pied_contenu_superieur">
+  	<div id="gabarit_pied_contenu">
+  		<div class="gabarit_pied_div">
+  			<span>Developpez.com</span>
+  			<p><a href="https://club.developpez.com/contacts/">Nous contacter</a></p>
+  			<p><a href="https://www.developpez.com/participez/">Participez</a></p>
+  			<p><a href="https://www.developpez.com/legal/">Informations légales</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Services</span>
+  			<p><a onclick="window.open(this.href); return false;" href="https://www.developpez.net/forums/f552/hardware-systemes-logiciels/">Forum Systèmes</a></p>
+  			<p><a href="https://blog.developpez.com/">Blogs</a></p>
+  			<p><a href="https://www.developpez.com/hebergement/">Hébergement</a></p>
+  		</div>
+  		<div class="gabarit_pied_div_separation">&nbsp;</div>
+  		<div class="gabarit_pied_div">
+  			<span>Partenaires</span>
+  			<p><a target="_blank" href="http://www.planethoster.net/">Hébergement Web</a></p>
+  		</div>
+  		<div style="clear: both;"></div>
+  		<div id="gabarit_pied_copyright">
+  			<p>Copyright &copy; 2000-2018 - www.developpez.com</p>
+  		</div>
+  	</div>
+  	</div>
+  </div>
+
+</footer>
+  </body>
+</html>
+
+		</section>
